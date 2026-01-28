@@ -94,7 +94,9 @@
 }
 
 .hero__description,
-.charac__description {
+.charac__description,
+.price__detail,
+.advantages {
   font-size: var(--font-size-5);
   font-family: var(--font-family-1);
   font-weight: var(--font-weight-3);
@@ -107,11 +109,8 @@
   margin-bottom: var(--spacing-400);
 }
 
-.hero__link {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: var(--spacing-200);
+.hero__link,
+.plan__link {
   text-transform: uppercase;
   font-size: var(--font-size-6-m);
   font-family: var(--font-family-2);
@@ -119,11 +118,18 @@
   color: var(--color-neutral-900);
   letter-spacing: var(--letter-spacing-2);
   line-height: var(--line-height-2);
-  margin-bottom: var(--spacing-200);
   background-color: var(--color-salmon-50);
   border: 2px solid var(--color-neutral-900);
   padding: var(--spacing-200);
   border-radius: var(--border-radius-8);
+}
+
+.hero__link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: var(--spacing-200);
+  margin-bottom: var(--spacing-200);
 }
 
 .hero__link::after {
@@ -217,6 +223,8 @@
 
 .step__section--bg {
   background-image: url("../assets/pattern-light-bg.svg");
+  display: grid;
+  grid-template-columns: 1fr;
   border-radius: var(--border-radius-12);
   padding: var(--spacing-600) var(--spacing-200);
 }
@@ -242,6 +250,73 @@
   width: min-content;
 }
 
-.steps__box:not(:last-child){
+.steps__box:not(:last-child) {
+  margin-bottom: var(--spacing-400);
+}
+
+.membership__section{
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--spacing-300);
+}
+
+.plan__link {
+  display: block;
+  text-align: center;
+}
+
+.plan__box {
+  padding: var(--spacing-400);
+  border: 1px solid var(--color-neutral-200);
+  border-radius: var(--border-radius-8);
+}
+
+.plan__title {
+  font-size: var(--font-size-4);
+  font-family: var(--font-family-2);
+  font-weight: var(--font-weight-2);
+  font-size: var(--font-size-6-m);
+  color: var(--color-neutral-900);
+  letter-spacing: var(--letter-spacing-2);
+  line-height: var(--line-height-4);
+  margin-bottom: var(--spacing-300);
+}
+
+.price__box{
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-100);
+    margin-bottom: var(--spacing-300);
+}
+
+.price__value{
+    font-family: var(--font-family-2);
+    font-size: var(--font-size-3);
+    color: var(--color-neutral-900);
+    font-weight: var(--font-weight-2);
+    letter-spacing: var(--letter-spacing-2);
+    line-height: var(--line-height-2);
+}
+
+.advantages__box::before{
+    content: "";
+    height: 1px;
+    width: 100%;
+    background-color: var(--color-neutral-200);
+    display: block;
+    margin-bottom: var(--spacing-300);
+}
+
+.advantages__box{
     margin-bottom: var(--spacing-400);
 }
+
+.plan__box:nth-child(odd){
+    background-color: var(--color-neutral-100);
+}
+
+.membership__section{
+    margin-bottom: var(--spacing-800);
+}
+
+.review__stars
