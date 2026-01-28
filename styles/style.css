@@ -66,6 +66,8 @@
 
 .limit {
   padding: var(--spacing-400) var(--spacing-250);
+  max-width: 1180px;
+  margin: 0 auto;
 }
 
 .hero__header--bg {
@@ -209,6 +211,11 @@
   align-items: center;
   gap: var(--spacing-200);
   margin-bottom: var(--spacing-200);
+}
+
+.characteristics__box {
+  display: grid;
+  grid-template-columns: 1fr;
 }
 
 .charac__content {
@@ -378,6 +385,7 @@
   border: 2px solid var(--color-neutral-0);
   display: flex;
   align-items: center;
+  justify-content: center;
   gap: var(--spacing-200);
   margin-bottom: var(--spacing-300);
 }
@@ -400,4 +408,118 @@
   gap: var(--spacing-300);
   align-items: center;
   justify-content: center;
+}
+
+@media (min-width: 700px) {
+  .hero__title {
+    font-size: var(--font-size-1);
+  }
+
+  .charac__image--one {
+    margin-bottom: var(--spacing-800);
+  }
+
+  .membership__section {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .section__title {
+    grid-column: 1/-1;
+    font-size: var(--font-size-2);
+  }
+
+  .quote {
+    font-size: var(--font-size-3);
+  }
+
+  .people__footer {
+    justify-content: center;
+  }
+
+  .footer__link,
+  .hero__link {
+    width: 380px;
+  }
+
+  .footer__link {
+    justify-self: center;
+  }
+}
+
+@media (min-width: 1000px) {
+  .hero__box {
+    grid-template-columns: 1fr 1fr;
+    gap: var(--spacing-800);
+  }
+
+  .characteristics__box {
+    grid-template-columns: 1fr 1fr;
+    gap: var(--spacing-800);
+  }
+
+  .charac__image--one {
+    grid-row: 1 / 2;
+  }
+
+  .one {
+    grid-column: 2/-1;
+    align-self: center;
+  }
+
+  .two {
+    grid-column: 1/2;
+    align-self: center;
+  }
+
+  .charac__image--two {
+    grid-column: 2/-1;
+  }
+
+  .step__section--bg {
+    grid-template-columns: repeat(4, 226px);
+    justify-content: center;
+    row-gap: var(--spacing-800);
+    column-gap: var(--spacing-600);
+  }
+
+  .step__section--bg .section__title {
+    text-align: center;
+  }
+
+  .steps__box {
+    position: relative;
+  }
+
+  .steps__box.steps__box:not(:last-child)::after {
+    content: url("../assets/pattern-arrow.svg");
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+
+  .membership__section {
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: var(--spacing-400);
+  }
+
+  .section__title {
+    text-align: center;
+  }
+
+  .plan__box:nth-child(3) {
+    transform: scale(1.1);
+  }
+
+  .review__section {
+    justify-items: center;
+    text-align: center;
+  }
+
+  .quote {
+    max-width: 40ch;
+  }
+
+  .footer__box .people__box {
+    justify-self: center;
+  }
 }
