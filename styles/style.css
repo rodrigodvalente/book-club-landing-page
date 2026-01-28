@@ -197,15 +197,6 @@
   margin-bottom: var(--spacing-300);
 }
 
-.word__decoration::after {
-  content: url("../assets/pattern-circle.png");
-  width: 46px;
-  height: 108px;
-  position: absolute;
-  left: -10px;
-  bottom: -50px;
-}
-
 .checkbox__box {
   display: flex;
   align-items: center;
