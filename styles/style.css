@@ -96,7 +96,7 @@
 .hero__description,
 .charac__description,
 .price__detail,
-.advantages {
+.advantages, .review__author {
   font-size: var(--font-size-5);
   font-family: var(--font-family-1);
   font-weight: var(--font-weight-3);
@@ -319,4 +319,22 @@
     margin-bottom: var(--spacing-800);
 }
 
-.review__stars
+.review__section{
+    display: grid;
+    grid-template-columns: 1fr;
+    margin-bottom: var(--spacing-800);
+}
+
+.review__stars{
+    margin-bottom: var(--spacing-400);
+}
+
+.quote{
+    font-family: var(--font-family-2);
+    font-size: var(--font-size-3-m);
+    color: var(--color-neutral-900);
+    font-weight: var(--font-weight-2);
+    letter-spacing: var(--letter-spacing-2);
+    line-height: var(--line-height-4);
+    margin-bottom: var(--spacing-400);
+}
